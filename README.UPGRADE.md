@@ -22,21 +22,42 @@ Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
 
 ## Introduction
 
-Always make  sure the database has been properly shutdown and the transaction log (virtuoso.trx)
-is empty before performing any of the following updates/upgrades.
+This document contains instructions on how to upgrade your existing Virtuoso database from one
+release to the next.
 
-Before upgrading any database, it is always a wise precaution to make a proper backup.
+The following table shows the timeline of each 6.x and 7.x release.
+
+	Release date            Version
+
+        August 15, 2018         v7.2.5
+        April 25, 2016          v7.2.4
+        December 09, 2015       v7.2.2
+        June 24, 2015           v7.2.1
+        February 17, 2015       v7.2.0
+        February 17, 2014       v7.1.0
+        August 02, 2013         v7.0.0
+
+        December 10, 2013       v6.1.8
+        July 22, 2013           v6.1.7
+        July 30, 2012           v6.1.6
+        March 15, 2012          v6.1.5
+        March 31, 2011          v6.1.4
+        March 30, 2011          v6.1.3
+        July 09, 2010           v6.1.2
+        March 30, 2010          v6.1.1
+        February 03, 2010       v6.1.0
+        October 16, 2009        v6.0.0
 
 
-## Upgrading from VOS 7.2.x to VOS 7.2.y
+Before upgrading any database it is always a wise precaution to make sure there is a complete
+backup of the existing installation.
 
-Upgrading your database to the latest version of 7.2.y is performed automatically when you start
-the newer engine binary on your existing database.
+Always make sure the database has been properly shutdown and the transaction log (virtuoso.trx)
+is empty (0 bytes) before performing any of the following updates or upgrades.
 
-The only requirement is that the existing database has been properly checkpointed and shutdown
-and that the existing transaction file (virtuoso.trx) is either empty or removed. 
-
-If the database has not been properly checkpointed, the following error will be shown:
+If your existing database has not been properly checkpointed prior to starting it with a newer
+virtuoso engine binary the following error will be written to the virtuoso.log and virtuoso
+will refuse to start:
 
 ```
     The transaction log file has been produced by server version
@@ -48,34 +69,54 @@ If the database has not been properly checkpointed, the following error will be 
     new version.
 ```
 
-## Upgrading from VOS 7.0.x-7.2.0 to VOS 7.2.y
+If you have any questions on upgrading an existing Virtuoso installation or any
+other topic related to Virtuoso Open Source, we invite you to file a
+[GitHub Issue Report](https://github.com/openlink/virtuoso-opensource/issues)
+so our support staff can assist you.
 
-Upgrading your database from any 7.0.x through 7.2.0 to the latest version of 7.2.y is performed
-automatically when you start the newer engine with **one** exception.
+
+## Upgrading from VOS 7.2.x to VOS 7.2.y
+
+Upgrading your database to the latest version of 7.2.y is performed automatically when you start
+the newer engine binary on your existing database.
+
+The only requirement is that the existing database has been properly checkpointed and shutdown
+using your previous virtuoso engine binary and that the existing transaction file (virtuoso.trx)
+is either empty (0 bytes) or removed.
+
+
+## Upgrading from VOS 7.0.0 upto 7.2.0 to VOS 7.2.y
+
+Upgrading your database from any version 7.0.x upto 7.2.0 to the latest version of 7.2.y is performed
+automatically when you start the newer engine with **one** major exception.
 
 As of engine 07.20.3213 Virtuoso supports `DATETIME` and `xsd:dateTime` values both with and
 without timezone information, i.e., both "timezoned" and "timezoneless". This solved several subtle
 issues when when loading or querying RDF datasets that have both "timezoned" and "timezoneless" data.
 
 Databases that were created by older engines (pre Virtuoso 7.2.1) will be using a backward compatible
-mode 0, which means that all datetime fields are "timezoned" as was the implicit case with the older engine. 
+mode 0, which means that all datetime fields are "timezoned" as was the implicit case with the older engine.
 
-Please read the Wiki article on 
-[Virtuoso Timezoneless Datetimes](http://vos.openlinksw.com/owiki/wiki/VOS/VirtTimezoneLessDateTime) 
+Please read the Wiki article on
+[Virtuoso Timezoneless Datetimes](http://vos.openlinksw.com/owiki/wiki/VOS/VirtTimezoneLessDateTime)
 which explains the different modes that Virtuoso 7.2.x supports and also shows the new functions
 that were added as well as instructions on how fix subtle bugs in your existing code base.
 
 As the timezoneless modes can only be set when creating a new database, switching modes will
 require a full dump and reload of all your data.
 
-Contact us at <vos.admin@openlinksw.com> for more info.
+Contact us using by filing a [GitHub Issue Report](https://github.com/openlink/virtuoso-opensource/issues)
+if you have any questions.
 
 
 ## Upgrading from VOS 6.x to VOS 7.2.x
 
-Although the 6.x database format is for the most part readable by a 7.x binary, we strongly
-recommend dumping the data from your 6.x database and re-loading it into a fresh 7.2.x database
-instance.
+Databases that were created prior to 6.1.4 will not work with the new 7.2.x engine without
+major conversion as shown below.
+
+Although from version 6.1.4 onward, the database format should for the most part readable by
+a 7.2.x binary, we **strongly recommend** dumping the data from any 6.x based database and
+re-loading it into a fresh 7.2.x database instance.
 
 A new 7.2.x database instance will use the new column store format which is a fast improvement
 in query speed, the size of the RDF_QUAD table as well as more efficient use of system memory.
@@ -83,15 +124,16 @@ in query speed, the size of the RDF_QUAD table as well as more efficient use of 
 Regular 6.x RDBMS tables can be dumped with the dbdump tool into scripts that can be replayed
 using the isql tool into the 7.x database.
 
-For 6.x RDF_QUAD table, we have a set of dump/load stored procedures to dump graphs into
+For the 6.x RDF_QUAD table, we have a set of dump/load stored procedures to dump graphs into
 a set of backup files, which can then be reloaded into the VOS 7.x database. Contact us at
 <vos.admin@openlinksw.com> for more info.
+
 
 
 ## Upgrading from VOS 5.x to VOS 7.x
 
 The database format has substantially changed between these two versions of Virtuoso. To upgrade
-your database, you must dump all your data from your VOS 5.x database and re-load it into VOS 7.x.
+your database, you **must** dump all your data from your VOS 5.x database and re-load it into VOS 7.x.
 
 Regular VOS 5.x RDBMS tables can be dumped with the dbdump tool into scripts that can be replayed
 using the isql tool into the VOS 7.x database.
@@ -145,7 +187,7 @@ to dump graphs into a set of backup files, which can then be reloaded
 into the VOS 6.0 database. Contact us at <vos.admin@openlinksw.com>
 for more info.
 
-If you attempt to start a VOS 5.0 database with a VOS 6.0 server, the 
+If you attempt to start a VOS 5.0 database with a VOS 6.0 server, the
 server will print the following message ans refuses to start the
 database:
 
@@ -179,7 +221,7 @@ the new RDF_QUAD table is installed. The steps for this are:
 
   6. Connect with isql to your database and run the libsrc/Wi/clrdf23.sql
      script. Depending on the number of quad records this can take
-     several hours. Once the conversion is complete, the database 
+     several hours. Once the conversion is complete, the database
      will shutdown itself.
 
   7. Edit virtuoso.ini and enable VADInstallDir and possibly HTTPServer
@@ -228,7 +270,7 @@ following text will appear in the virtuoso session log:
 This check will take some time depending on the number of stored
 QUADS, but if the check succeeds the following message is entered
 in the log and virtuoso will flag this check is done, so it will
-not affect subsequent restarts of the database server. 
+not affect subsequent restarts of the database server.
 
   21:05:36 PL LOG: No need to update DB.DBA.RDF_QUAD
 
