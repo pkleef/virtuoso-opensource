@@ -7,9 +7,12 @@ Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
 **Table of Contents**
 
 - [Introduction](#introduction)
-- [Upgrading from VOS 7.](#upgrading-from-vos-7)
-- [Upgrading old versions](#upgrading-old-versions)
-  - [Upgrading from VOS 5.0.X to VOS 5.0.Y](#upgrading-from-vos-50x-to-vos-50y)
+- [Upgrading from VOS 7.2.x to VOS 7.2.y](#upgrading-from-vos-72x-to-vos-72y)
+- [Upgrading from VOS 7.0.x-7.2.0 to VOS 7.2.y](#upgrading-from-vos-70x-720-to-vos-72y)
+- [Upgrading from VOS 6.x to VOS 7.2.x](#upgrading-from-vos-6x-to-vos-72x)
+- [Upgrading from VOS 5.x to VOS 7.x](#upgrading-from-vos-5x-to-vos-7x)
+- [Upgrading between deprecated versions](#upgrading-between-deprecated-versions)
+  - [Upgrading from VOS 5.0.x to VOS 5.0.Y](#upgrading-from-vos-50x-to-vos-50y)
   - [Upgrading from VOS 5.0.X to VOS 6.1.0](#upgrading-from-vos-50x-to-vos-610)
   - [Upgrading from VOS 6.0.0(-TP1) to VOS 6.1.0](#upgrading-from-vos-600-tp1-to-vos-610)
   - [Upgrading from VOS 6.1.X to VOS 6.1.Y](#upgrading-from-vos-61x-to-vos-61y)
@@ -19,19 +22,95 @@ Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
 
 ## Introduction
 
-Always make  sure the database has been properly shutdown and the
-transaction log (virtuoso.trx) is empty before performing any of the
-following updates/upgrades.
+Always make  sure the database has been properly shutdown and the transaction log (virtuoso.trx)
+is empty before performing any of the following updates/upgrades.
 
-Before upgrading any database, it is always a wise precaution to make
-a proper backup.
+Before upgrading any database, it is always a wise precaution to make a proper backup.
 
 
-## Upgrading from VOS 7.
+## Upgrading from VOS 7.2.x to VOS 7.2.y
 
-## Upgrading old versions
+Upgrading your database to the latest version of 7.2.y is performed automatically when you start
+the newer engine binary on your existing database.
 
-### Upgrading from VOS 5.0.X to VOS 5.0.Y
+The only requirement is that the existing database has been properly checkpointed and shutdown
+and that the existing transaction file (virtuoso.trx) is either empty or removed. 
+
+If the database has not been properly checkpointed, the following error will be shown:
+
+```
+    The transaction log file has been produced by server version
+    '07.20.XXXX'. The version of this server is '07.20.YYYY'. If the
+    transaction log is empty or you do not want to replay it then delete
+    it and start the server again. Otherwise replay the log using the
+    server of version '07.02.XXXX' and make checkpoint and shutdown
+    to ensure that the log is empty, then delete it and start using
+    new version.
+```
+
+## Upgrading from VOS 7.0.x-7.2.0 to VOS 7.2.y
+
+Upgrading your database from any 7.0.x through 7.2.0 to the latest version of 7.2.y is performed
+automatically when you start the newer engine with **one** exception.
+
+As of engine 07.20.3213 Virtuoso supports `DATETIME` and `xsd:dateTime` values both with and
+without timezone information, i.e., both "timezoned" and "timezoneless". This solved several subtle
+issues when when loading or querying RDF datasets that have both "timezoned" and "timezoneless" data.
+
+Databases that were created by older engines (pre Virtuoso 7.2.1) will be using a backward compatible
+mode 0, which means that all datetime fields are "timezoned" as was the implicit case with the older engine. 
+
+Please read the Wiki article on 
+[Virtuoso Timezoneless Datetimes](http://vos.openlinksw.com/owiki/wiki/VOS/VirtTimezoneLessDateTime) 
+which explains the different modes that Virtuoso 7.2.x supports and also shows the new functions
+that were added as well as instructions on how fix subtle bugs in your existing code base.
+
+As the timezoneless modes can only be set when creating a new database, switching modes will
+require a full dump and reload of all your data.
+
+Contact us at <vos.admin@openlinksw.com> for more info.
+
+
+## Upgrading from VOS 6.x to VOS 7.2.x
+
+Although the 6.x database format is for the most part readable by a 7.x binary, we strongly
+recommend dumping the data from your 6.x database and re-loading it into a fresh 7.2.x database
+instance.
+
+A new 7.2.x database instance will use the new column store format which is a fast improvement
+in query speed, the size of the RDF_QUAD table as well as more efficient use of system memory.
+
+Regular 6.x RDBMS tables can be dumped with the dbdump tool into scripts that can be replayed
+using the isql tool into the 7.x database.
+
+For 6.x RDF_QUAD table, we have a set of dump/load stored procedures to dump graphs into
+a set of backup files, which can then be reloaded into the VOS 7.x database. Contact us at
+<vos.admin@openlinksw.com> for more info.
+
+
+## Upgrading from VOS 5.x to VOS 7.x
+
+The database format has substantially changed between these two versions of Virtuoso. To upgrade
+your database, you must dump all your data from your VOS 5.x database and re-load it into VOS 7.x.
+
+Regular VOS 5.x RDBMS tables can be dumped with the dbdump tool into scripts that can be replayed
+using the isql tool into the VOS 7.x database.
+
+For VOS 5.0 RDF_QUAD table, we have a set of dump/load stored procedures to dump graphs into
+a set of backup files, which can then be reloaded into the VOS 7.x database. Contact us at
+<vos.admin@openlinksw.com> for more info.
+
+If you attempt to start a VOS 5.x database with a VOS 7.x server, the server will print the
+following message ans refuses to start the database:
+
+    The database you are opening was last closed with a server of
+    version 3016. The present server is of version 3126. This server
+    does not read this pre 6.0 format.
+
+
+## Upgrading between deprecated versions
+
+### Upgrading from VOS 5.0.x to VOS 5.0.Y
 
 The database format has not changed between various versions of Virtuoso
 5.0.X, so from a database standpoint no particular steps need to be
