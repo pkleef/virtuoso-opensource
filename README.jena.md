@@ -1,5 +1,17 @@
-How to build Virtuoso Jena Provider
-===================================
+# How to build the Virtuoso Jena Provider
+
+Copyright (C) 1998-2018 OpenLink Software <vos.admin@openlinksw.com>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Build instructions](#build-instructions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+## Build instructions
 
 The Jena Provider can be compiled with JDK 1.5 or newer.
 

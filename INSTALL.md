@@ -1,3 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Installation Instructions](#installation-instructions)
+  - [Basic Installation](#basic-installation)
+  - [Compilers and Options](#compilers-and-options)
+  - [Compiling For Multiple Architectures](#compiling-for-multiple-architectures)
+  - [Installation Names](#installation-names)
+  - [Optional Features](#optional-features)
+  - [Specifying the System Type](#specifying-the-system-type)
+  - [Sharing Defaults](#sharing-defaults)
+  - [Defining Variables](#defining-variables)
+  - ['configure' Invocation](#configure-invocation)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Installation Instructions
 =========================
 

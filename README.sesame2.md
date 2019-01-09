@@ -1,5 +1,17 @@
-How to build the Virtuoso Sesame 2 provider
-===========================================
+# How to build the Virtuoso Sesame 2 provider
+
+Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Build instructions](#build-instructions)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
+## Build instructions
 
 The Sesame 2 Provider requires JDK 1.5 or newer.
 

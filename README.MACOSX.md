@@ -1,7 +1,25 @@
-Building Virtuoso Open Source Edition on Mac OS X
-=================================================
+# How to build Virtuoso Open Source Edition on Mac OS X
 
-*Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>*
+Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Introduction](#introduction)
+- [Downloading the source code](#downloading-the-source-code)
+  - [Using git on a local machine](#using-git-on-a-local-machine)
+  - [Forking the tree on Github](#forking-the-tree-on-github)
+  - [Using a source tar archive](#using-a-source-tar-archive)
+- [Building on Mac OS X 10.10 and above](#building-on-mac-os-x-1010-and-above)
+  - [Optional features](#optional-features)
+  - [OpenSSL on Mac OS X](#openssl-on-mac-os-x)
+  - [ImageMagick on Mac OS X](#imagemagick-on-mac-os-x)
+- [Example of running configure on Mac OS X](#example-of-running-configure-on-mac-os-x)
+- [Diskspace Requirements](#diskspace-requirements)
+- [Generate build files](#generate-build-files)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
 ## Introduction

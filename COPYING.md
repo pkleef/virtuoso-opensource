@@ -1,4 +1,4 @@
-### GNU GENERAL PUBLIC LICENSE
+# GNU GENERAL PUBLIC LICENSE
 
 Version 2, June 1991
 
@@ -8,7 +8,18 @@ Version 2, June 1991
     Everyone is permitted to copy and distribute verbatim copies
     of this license document, but changing it is not allowed.
 
-### Preamble
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Preamble](#preamble)
+- [TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION](#terms-and-conditions-for-copying-distribution-and-modification)
+- [END OF TERMS AND CONDITIONS](#end-of-terms-and-conditions)
+- [How to Apply These Terms to Your New Programs](#how-to-apply-these-terms-to-your-new-programs)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Preamble
 
 The licenses for most software are designed to take away your freedom
 to share and change it. By contrast, the GNU General Public License is
@@ -59,7 +70,7 @@ all.
 The precise terms and conditions for copying, distribution and
 modification follow.
 
-### TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+## TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
 **0.** This License applies to any program or other work which
 contains a notice placed by the copyright holder saying it may be
@@ -291,9 +302,9 @@ FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF
 SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGES.
 
-### END OF TERMS AND CONDITIONS
+## END OF TERMS AND CONDITIONS
 
-### How to Apply These Terms to Your New Programs
+## How to Apply These Terms to Your New Programs
 
 If you develop a new program, and you want it to be of the greatest
 possible use to the public, the best way to achieve this is to make it

@@ -1,11 +1,18 @@
-Credits
-=======
+# Credits
 
-*Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>*
+Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Included Functionality](#included-functionality)
+- [Optional functionality](#optional-functionality)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 
-Included Functionality
-----------------------
+## Included Functionality
 
 The OpenLink Software Virtuoso Open-Source Edition (VOS) project wishes to
 acknowledge incorporation of code from the following projects:
@@ -106,8 +113,8 @@ DocBook stylesheets
     DocBook is distributable under the terms of the MIT/X Consortium License.
 
 
-Optional functionality
-----------------------
+## Optional functionality
+
 OpenLink Software Virtuoso Open-Source Edition contains optional
 functionality that may require libraries from some of the following
 projects:

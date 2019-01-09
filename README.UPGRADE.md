@@ -1,10 +1,23 @@
-Virtuoso Open Source Upgrade Notes
-==================================
+# How to upgrade to newer versions of Virtuoso Open Source
 
-*Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>*
+Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
 
-Introduction
-------------
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Introduction](#introduction)
+- [Upgrading from VOS 7.](#upgrading-from-vos-7)
+- [Upgrading old versions](#upgrading-old-versions)
+  - [Upgrading from VOS 5.0.X to VOS 5.0.Y](#upgrading-from-vos-50x-to-vos-50y)
+  - [Upgrading from VOS 5.0.X to VOS 6.1.0](#upgrading-from-vos-50x-to-vos-610)
+  - [Upgrading from VOS 6.0.0(-TP1) to VOS 6.1.0](#upgrading-from-vos-600-tp1-to-vos-610)
+  - [Upgrading from VOS 6.1.X to VOS 6.1.Y](#upgrading-from-vos-61x-to-vos-61y)
+  - [Upgrading from VOS 6.1.X to VOS 6.1.4](#upgrading-from-vos-61x-to-vos-614)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Introduction
 
 Always make  sure the database has been properly shutdown and the
 transaction log (virtuoso.trx) is empty before performing any of the
@@ -14,8 +27,11 @@ Before upgrading any database, it is always a wise precaution to make
 a proper backup.
 
 
-Upgrading from VOS 5.0.X to VOS 5.0.Y
--------------------------------------
+## Upgrading from VOS 7.
+
+## Upgrading old versions
+
+### Upgrading from VOS 5.0.X to VOS 5.0.Y
 
 The database format has not changed between various versions of Virtuoso
 5.0.X, so from a database standpoint no particular steps need to be
@@ -35,8 +51,7 @@ print the following message and refuses to start the database:
     new version.
 
 
-Upgrading from VOS 5.0.X to VOS 6.1.0
--------------------------------------
+### Upgrading from VOS 5.0.X to VOS 6.1.0
 
 The database format has substantially changed between these two versions
 of Virtuoso. To upgrade your database, you must dump all your data from
@@ -61,8 +76,7 @@ database:
 
 
 
-Upgrading from VOS 6.0.0(-TP1) to VOS 6.1.0
--------------------------------------------
+### Upgrading from VOS 6.0.0(-TP1) to VOS 6.1.0
 
 The database disk format has not changed, but the introduction of a newer
 RDF index requires you run a script to upgrade the RDF_QUAD table. Since
@@ -95,8 +109,7 @@ the new RDF_QUAD table is installed. The steps for this are:
   8. Start up database
 
 
-Upgrading from VOS 6.1.X to VOS 6.1.Y
--------------------------------------
+### Upgrading from VOS 6.1.X to VOS 6.1.Y
 
 The database format has not changed between various versions of Virtuoso
 6.1.X, so from a database standpoint no particular steps need to be
@@ -116,8 +129,7 @@ print the following message and refuses to start the database:
     new version.
 
 
-Upgrading from VOS 6.1.X to VOS 6.1.4
--------------------------------------
+### Upgrading from VOS 6.1.X to VOS 6.1.4
 
 In Virtuoso versions before 6.1.4 some XML data was stored in the
 QUAD store in such a way it could break the sequence in an index

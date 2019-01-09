@@ -1,3 +1,18 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Using Virtuoso Open Source Edition GIT Tree](#using-virtuoso-open-source-edition-git-tree)
+- [Introduction](#introduction)
+- [Git Archive Server Access](#git-archive-server-access)
+- [Package Dependencies](#package-dependencies)
+  - [Mac OS X 10.10](#mac-os-x-1010)
+  - [RedHat Enterprise Linux 7](#redhat-enterprise-linux-7)
+- [Diskspace Requirements](#diskspace-requirements)
+- [Generate build files](#generate-build-files)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 Using Virtuoso Open Source Edition GIT Tree
 ===========================================
 

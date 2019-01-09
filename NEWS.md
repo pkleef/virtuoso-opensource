@@ -1,6 +1,22 @@
 NEWS
 ====
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [October 2, 2018, v7.2.6-dev:](#october-2-2018-v726-dev)
+- [August 15, 2018, v7.2.5](#august-15-2018-v725)
+- [April 25, 2016, v7.2.4](#april-25-2016-v724)
+- [December 09, 2015, v7.2.2](#december-09-2015-v722)
+- [June 24, 2015, v7.2.1](#june-24-2015-v721)
+- [February 17, 2015, v7.2.0](#february-17-2015-v720)
+- [February 17, 2014, v7.1.0](#february-17-2014-v710)
+- [August 02, 2013, v7.0.0](#august-02-2013-v700)
+- [July 12, 2011, v7.0.0-alpha](#july-12-2011-v700-alpha)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 October 2, 2018, v7.2.6-dev:
 ----------------------------
 

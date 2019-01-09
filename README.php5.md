@@ -1,17 +1,34 @@
-PHP SAPI module for Virtuoso
-============================
+# How to build the Virtuoso PHP hosting module
 
-This is a SAPI module for PHP 5.x, implemented as a Virtuoso loadable module.
+Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
 
-Building php
-------------
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Introduction](#introduction)
+- [Building php](#building-php)
+- [Installation](#installation)
+- [Virtuoso PHP Extensions](#virtuoso-php-extensions)
+  - [Settings](#settings)
+  - [Functions](#functions)
+- [Example](#example)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## Introduction
+
+This is a SAPI module for PHP 5.6.x implemented as a Virtuoso loadable module.
+
+
+## Building php
 
 To build the plugin, you first need to build a libphp5.so configured with ZTS.
 
 ```
     Package	Version		From
     -------	-------		-----------------------------
-    php		5.6.35		http://www.php.net/downloads/
+    php		5.6.39		http://www.php.net/downloads/
 ```
 
 
@@ -19,7 +36,7 @@ In the php source directory, execute something similar to:
 
 ```
 	./configure \
-		--prefix=/usr/local/php-5.2.10 \
+		--prefix=/usr/local/php-5.6.39 \
 		--enable-maintainer-zts \
 		--enable-embed=shared \
 		--with-config-file-path=. \
@@ -80,13 +97,13 @@ Next build and install the php packages.
 In the Virtuoso Open Source directory, execute the following command:
 
 ```
-	./configure .... --enable-php5=/usr/local/php-5.2.10 ...... 
+	./configure .... --enable-php5=/usr/local/php-5.6.39 ...... 
 ```
 
   or if you configured Virtuoso before in this directory:
 
 ```
-	./config.nice --enable-php5=/usr/local/php-5.2.10
+	./config.nice --enable-php5=/usr/local/php-5.6.39
 ```
 
 so the build process knows where to find the necessary PHP header files.
@@ -96,8 +113,7 @@ At the end of the configure step, the summary screen should indicate that the BU
 unable to locate your php5 installation.
 
 
-Installation
-------------
+## Installation
 
   1. Copy the libphp5.so into same directory where virtuoso installs the
      hosting_php5.so plugin e.g. 
@@ -131,11 +147,9 @@ Installation
 
 
 
-Virtuoso PHP Extensions
------------------------
+## Virtuoso PHP Extensions
 
-Settings
---------
+### Settings
 
 The Virtuoso php hosting plugin adds the following default settings to the php.ini file:
 
@@ -153,8 +167,7 @@ normally associated with your local virtuoso database.
 
 The virtuoso.allow_dba option rejects the use of the dba uid when using __virt_internal_dsn().
 
-Functions
----------
+### Functions
 
     __virt_internal_dsn([optional dsn])
 
@@ -204,6 +217,8 @@ application also outside of the virtuoso hosting environment, you can use it lik
 	odbc_disconnect ($db);
   ?>
 ```
+
+## Example
 
 Here is an example of a Virtuoso SQL script that creates a database
 schema and a table, a user that owns the schema and a vhost entry

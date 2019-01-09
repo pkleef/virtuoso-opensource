@@ -1,6 +1,22 @@
 # Virtuoso GeoSPARQL support
 
-_Copyright (C) 2018-2019 OpenLink Software_
+Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [New Plugins](#new-plugins)
+  - [The proj4 plugin](#the-proj4-plugin)
+  - [The geos plugin](#the-geos-plugin)
+  - [The shapefileio plugin](#the-shapefileio-plugin)
+- [Changes to virtuoso.ini](#changes-to-virtuosoini)
+- [Troubleshooting](#troubleshooting)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 
 ## Introduction
 This release marks the addition of GeoSPARQL function support to Virtuoso Open Source Edition.
