@@ -43,7 +43,7 @@ If the database has not been properly checkpointed, the following error will be 
     '07.20.XXXX'. The version of this server is '07.20.YYYY'. If the
     transaction log is empty or you do not want to replay it then delete
     it and start the server again. Otherwise replay the log using the
-    server of version '07.02.XXXX' and make checkpoint and shutdown
+    server of version '07.20.XXXX' and make checkpoint and shutdown
     to ensure that the log is empty, then delete it and start using
     new version.
 ```
