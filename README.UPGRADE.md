@@ -27,26 +27,26 @@ This document contains instructions on how to upgrade your existing Virtuoso dat
 The following table shows the timeline of each 6.x and 7.x release.
 
 ```
-    Release date            Version
+  Release date            Version
 
-    August 15, 2018         v7.2.5
-    April 25, 2016          v7.2.4
-    December 09, 2015       v7.2.2
-    June 24, 2015           v7.2.1
-    February 17, 2015       v7.2.0
-    February 17, 2014       v7.1.0
-    August 02, 2013         v7.0.0
+  August 15, 2018         v7.2.5
+  April 25, 2016          v7.2.4
+  December 09, 2015       v7.2.2
+  June 24, 2015           v7.2.1
+  February 17, 2015       v7.2.0
+  February 17, 2014       v7.1.0
+  August 02, 2013         v7.0.0
 
-    December 10, 2013       v6.1.8
-    July 22, 2013           v6.1.7
-    July 30, 2012           v6.1.6
-    March 15, 2012          v6.1.5
-    March 31, 2011          v6.1.4
-    March 30, 2011          v6.1.3
-    July 09, 2010           v6.1.2
-    March 30, 2010          v6.1.1
-    February 03, 2010       v6.1.0
-    October 16, 2009        v6.0.0
+  December 10, 2013       v6.1.8
+  July 22, 2013           v6.1.7
+  July 30, 2012           v6.1.6
+  March 15, 2012          v6.1.5
+  March 31, 2011          v6.1.4
+  March 30, 2011          v6.1.3
+  July 09, 2010           v6.1.2
+  March 30, 2010          v6.1.1
+  February 03, 2010       v6.1.0
+  October 16, 2009        v6.0.0
 ```
 
 Before upgrading any database it is always a wise precaution to make sure there is a complete backup of the existing
@@ -59,13 +59,13 @@ If your existing database has not been properly checkpointed prior to starting i
 the following error will be written to the virtuoso.log and virtuoso will refuse to start:
 
 ```
-    The transaction log file has been produced by server version
-    '07.20.XXXX'. The version of this server is '07.20.YYYY'. If the
-    transaction log is empty or you do not want to replay it then delete
-    it and start the server again. Otherwise replay the log using the
-    server of version '07.20.XXXX' and make checkpoint and shutdown
-    to ensure that the log is empty, then delete it and start using
-    new version.
+  The transaction log file has been produced by server version
+  '07.20.XXXX'. The version of this server is '07.20.YYYY'. If the
+  transaction log is empty or you do not want to replay it then delete
+  it and start the server again. Otherwise replay the log using the
+  server of version '07.20.XXXX' and make checkpoint and shutdown
+  to ensure that the log is empty, then delete it and start using
+  new version.
 ```
 
 If you have any questions on upgrading an existing Virtuoso installation or any other topic related to Virtuoso Open
@@ -138,9 +138,9 @@ If you attempt to start a VOS 5.x database with a VOS 7.x server, the server wil
 to start the database:
 
 ```
-    The database you are opening was last closed with a server of
-    version 3016. The present server is of version 3126. This server
-    does not read this pre 6.0 format.
+  The database you are opening was last closed with a server of
+  version 3016. The present server is of version 3126. This server
+  does not read this pre 6.0 format.
 ```
 
 
@@ -156,13 +156,13 @@ transaction logs can have a different version tag. In this case the virtuoso ser
 refuses to start the database:
 
 ```
-    The transaction log file has been produced by server version
-    '05.00.XXXX'. The version of this server is '05.00.YYYY'. If the
-    transaction log is empty or you do not want to replay it then delete
-    it and start the server again. Otherwise replay the log using the
-    server of version '05.00.XXXX' and make checkpoint and shutdown
-    to ensure that the log is empty, then delete it and start using
-    new version.
+  The transaction log file has been produced by server version
+  '05.00.XXXX'. The version of this server is '05.00.YYYY'. If the
+  transaction log is empty or you do not want to replay it then delete
+  it and start the server again. Otherwise replay the log using the
+  server of version '05.00.XXXX' and make checkpoint and shutdown
+  to ensure that the log is empty, then delete it and start using
+  new version.
 ```
 
 
@@ -181,9 +181,9 @@ If you attempt to start a VOS 5.0 database with a VOS 6.0 server, the server wil
 to start the database:
 
 ```
-    The database you are opening was last closed with a server of
-    version 3016. The present server is of version 3126. This server
-    does not read this pre 6.0 format.
+  The database you are opening was last closed with a server of
+  version 3016. The present server is of version 3126. This server
+  does not read this pre 6.0 format.
 ```
 
 
@@ -227,13 +227,13 @@ transaction logs can have a different version tag. In this case the virtuoso ser
 refuses to start the database:
 
 ```
-    The transaction log file has been produced by server version
-    '06.01.XXXX'. The version of this server is '06.01.YYYY'. If the
-    transaction log is empty or you do not want to replay it then delete
-    it and start the server again. Otherwise replay the log using the
-    server of version '06.01.XXXX' and make checkpoint and shutdown
-    to ensure that the log is empty, then delete it and start using
-    new version.
+  The transaction log file has been produced by server version
+  '06.01.XXXX'. The version of this server is '06.01.YYYY'. If the
+  transaction log is empty or you do not want to replay it then delete
+  it and start the server again. Otherwise replay the log using the
+  server of version '06.01.XXXX' and make checkpoint and shutdown
+  to ensure that the log is empty, then delete it and start using
+  new version.
 ```
 
 
@@ -257,7 +257,7 @@ This check will take some time depending on the number of stored QUADS, but if t
 entered in the log and virtuoso will flag this check is done, so it will not affect subsequent restarts of the database server.
 
 ```
-  21:05:36 PL LOG: No need to update DB.DBA.RDF_QUAD
+    21:05:36 PL LOG: No need to update DB.DBA.RDF_QUAD
 ```
 
 The database will continue to perform the startup routines and go into an online state.
@@ -296,8 +296,8 @@ Once the DBA has checked the backups, disk space and found an appropriate time-s
 the virtuoso.ini file and add the following flag:
 
 ```
-    [Parameters]
-    AnalyzeFixQuadStore = 1
+  [Parameters]
+  AnalyzeFixQuadStore = 1
 ```
 
 
