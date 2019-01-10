@@ -8,7 +8,7 @@ Copyright (C) 1998-2019 OpenLink Software <vos.admin@openlinksw.com>
 
 - [Introduction](#introduction)
 - [Upgrading from VOS 7.2.x to VOS 7.2.y](#upgrading-from-vos-72x-to-vos-72y)
-- [Upgrading from VOS 7.0.x-7.2.0 to VOS 7.2.y](#upgrading-from-vos-70x-720-to-vos-72y)
+- [Upgrading from VOS 7.0.0 upto 7.2.0 to VOS 7.2.y](#upgrading-from-vos-700-upto-720-to-vos-72y)
 - [Upgrading from VOS 6.x to VOS 7.2.x](#upgrading-from-vos-6x-to-vos-72x)
 - [Upgrading from VOS 5.x to VOS 7.x](#upgrading-from-vos-5x-to-vos-7x)
 - [Upgrading between deprecated versions](#upgrading-between-deprecated-versions)
