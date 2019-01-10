@@ -134,7 +134,7 @@ into the VOS 7.x database.
 For VOS 5.0 RDF_QUAD table, we have a set of dump/load stored procedures to dump graphs into a set of backup files,
 which can then be reloaded into the VOS 7.x database. Contact us at <vos.admin@openlinksw.com> for more info.
 
-If you attempt to start a VOS 5.x database with a VOS 7.x server, the server will print the following message ans refuses
+If you attempt to start a VOS 5.x database with a VOS 7.x server, the server will print the following message and refuses
 to start the database:
 
 ```
@@ -177,7 +177,7 @@ into the VOS 6.0 database.
 For VOS 5.0 RDF_QUAD table, we have a set of dump/load stored procedures to dump graphs into a set of backup files,
 which can then be reloaded into the VOS 6.0 database. Contact us at <vos.admin@openlinksw.com> for more info.
 
-If you attempt to start a VOS 5.0 database with a VOS 6.0 server, the server will print the following message ans refuses
+If you attempt to start a VOS 5.0 database with a VOS 6.0 server, the server will print the following message and refuses
 to start the database:
 
 ```
