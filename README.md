@@ -12,7 +12,7 @@
 
 * [Documentation](https://docs.openlinksw.com/virtuoso/)
 * [Community Forums](https://community.openlinksw.com/) - Community forum for all OpenLink products
-* [Wiki (old)](https://vos.openlinksw.com/owiki/wiki/VOS)
+* [Wiki](https://vos.openlinksw.com/)
 
 ## Reporting Security Vulnerabilities
 
