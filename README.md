@@ -1,4 +1,4 @@
-![Virtuoso](https://github.com/openlink/virtuoso-opensource/blob/develop/7/binsrc/vsp/favicon/favicon.svg)
+![Virtuoso](https://github.com/openlink/virtuoso-opensource/blob/develop/7/binsrc/vsp/images/virtuoso_banner.gif)
 
 ![GitHub Release](https://img.shields.io/github/v/release/openlink/virtuoso-opensource?label=latest%20release)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openlink/virtuoso-opensource?style=flat)
