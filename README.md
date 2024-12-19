@@ -16,7 +16,7 @@
 
 ## Reporting Security Vulnerabilities
 
-If you have found a security vulnerability, please look at the [instructions on how to properly report it](https://github.com/openlink/virtuoso-opensource/SECURITY.md).
+If you have found a security vulnerability, please look at the [instructions on how to properly report it](SECURITY.md).
 
 ## Reporting an issue
 
