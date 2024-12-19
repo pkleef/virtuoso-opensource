@@ -16,11 +16,11 @@
 
 ## Reporting Security Vulnerabilities
 
-If you have found a security vulnerability, please look at the [instructions on how to properly report it](SECURITY.md).
+If you have found a security vulnerability, please look at the [instructions on how to report it](SECURITY.md).
 
 ## Reporting an issue
 
-If you believe you have discovered a defect in Keycloak, please open [an issue](https://github.com/openlink/virtuoso-opensource/issues/).
+If you believe you have discovered a defect in Virtuoso, please open [an issue](https://github.com/openlink/virtuoso-opensource/issues/).
 Please remember to provide a good summary, description as well as steps to reproduce the issue.
 
 ## Building from Source
