@@ -2,9 +2,8 @@
 
 Copyright (C) 1998-2024 OpenLink Software <vos.admin@openlinksw.com>
 
-![GitHub Release](https://img.shields.io/github/v/release/openlink/virtuoso-opensource/?label=latest%20release)
-[![OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/projects/6818/badge)](https://bestpractices.coreinfrastructure.org/projects/6818)
-![GitHub Repo stars](https://img.shields.io/github/stars/openlink/virtuoso-opensource/?style=flat)
+![GitHub Release](https://img.shields.io/github/v/release/openlink/virtuoso-opensource?label=latest%20release)
+![GitHub Repo stars](https://img.shields.io/github/stars/openlink/virtuoso-opensource?style=flat)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/openlink/virtuoso-opensource)
 
 ## Table of Contents
