@@ -1,10 +1,5 @@
 ![Virtuoso Open Source Edition](https://github.com/openlink/virtuoso-opensource/blob/develop/7/binsrc/vsp/favicon/apple-touch-icon-180x180.png)
 
-
-# Virtuoso Open-Source Edition: Building
-https://github.com/openlink/virtuoso-opensource/blob/develop/7/binsrc/vsp/favicon/apple-touch-icon-180x180.png
-Copyright (C) 1998-2024 OpenLink Software <vos.admin@openlinksw.com>
-
 ![GitHub Release](https://img.shields.io/github/v/release/openlink/virtuoso-opensource?label=latest%20release)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openlink/virtuoso-opensource?style=flat)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/openlink/virtuoso-opensource)
