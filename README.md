@@ -1,12 +1,12 @@
 ![Virtuoso](https://github.com/openlink/virtuoso-opensource/blob/develop/7/binsrc/vsp/images/virtuoso_banner.gif)
 
-![GitHub Created At](https://img.shields.io/github/created-at/openlink/virtuoso-opensource)
 ![GitHub Release](https://img.shields.io/github/v/release/openlink/virtuoso-opensource?label=latest%20release)
 ![GitHub commits since latest release (branch)](https://img.shields.io/github/commits-since/openlink/virtuoso-opensource/latest/develop%2F7)
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/openlink/virtuoso-opensource)
 ![GitHub Repo stars](https://img.shields.io/github/stars/openlink/virtuoso-opensource?style=flat)
 ![GitHub forks](https://img.shields.io/github/forks/openlink/virtuoso-opensource?style=flat)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/openlink/virtuoso-opensource)
+![Docker Pulls](https://img.shields.io/docker/pulls/openlink/virtuoso-opensource-7)
 
 
 # Virtuoso Open Source Edition
@@ -33,6 +33,8 @@ To build from source, refer to the [building and working with the code base](REA
 
 ## Using Docker
 ![Docker Pulls](https://img.shields.io/docker/pulls/openlink/virtuoso-opensource-7)
+
+For more information about using the the Virtuoso Docker image, visit the [Docker Hub](https://hub.docker.com/repository/docker/openlink/virtuoso-opensource-7/general).
 
 
 ## License
