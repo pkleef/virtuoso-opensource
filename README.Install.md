@@ -1,17 +1,19 @@
 
 # Installing VOS
 
-## Prebuilt stable binaries
+## Using Stable Binaries
+
+### Prebuilt Virtuoso binaries
 
 For convenience, you can download prebuilt binaries for most Linux, macOS and Windows platforms from [the latest stable release on Github](https://github.com/openlink/virtuoso-opensource/releases/latest).
 
 Previous releases are also backed-up on [Sourceforge](https://sourceforge.net/projects/virtuoso/files/virtuoso/).
 
-## Using Docker Hub
+### Using Docker Hub
 
 For more information about using the the Virtuoso Docker image, visit [Docker Hub](https://hub.docker.com/repository/docker/openlink/virtuoso-opensource-7/general).
 
-## Using Maven Central
+### Using Maven Central
 
 Virtuoso JDBC drivers, as well as Jena, Sesame and RDF4j providers, can be downloaded from [Maven Central](https://central.sonatype.com/search?q=com.openlinksw).
 
@@ -29,6 +31,8 @@ $ cd virtuoso-opensource
 The default and recommended branch is `develop/7`. Users requiring a slower update cycle may prefer `stable/7` instead.
 
 ### Package Dependencies
+
+#### Core Dependencies
 
 For a minimal build with core VOS functionality, ensure you have the following packages and recommended versions installed:
 
@@ -49,12 +53,32 @@ The `Minimum` and `Upto` columns specify known-good versions for each package. O
 
 You can test the installed version of each package by running it with `--version` except openssl, where the command is `openssl version`.
 
-In addition to the above core, there are a few optional but recommended packages:
+#### Recommended Packages
 
-   * libedit (or the legacy alternative, readline) - this makes the isql commandline utility more usable
-   * bzip2, xz, lzma - compression utilities for use with bulk-loading large amounts of RDF data
+In addition to the above core, we recommend the following:
 
-Virtuoso also has support for GeoSPARQL functions which requires the `proj4`, `geos` and `shapefileio` plugins. Building these is the subject of a separate document: [README.GeoSPARQL.md](README.GeoSPARQL.md).
+| Package | Recommended Version | From                               |
+| ------- | ------------------- | ---------------------------------- |
+| libedit | 20240517-3.1        | https://www.thrysoee.dk/editline/  |
+| bzip2   | 1.0.8               | https://sourceware.org/pub/bzip2/  |
+| xz      | 5.2.12              | https://tukaani.org/xz/            |
+
+libedit makes the `isql` commandline utility more usable.
+bzip2 and xz are useful for bulk-loading large amounts of RDF data
+
+#### Specific Usage Cases
+
+The following packages are required if you have specific use-cases in mind:
+
+| Package     | Recommended Version | From                                 |
+| ----------- | ------------------- | ------------------------------------ |
+| openldap    | >= 2.6.8            | https://www.openldap.org/            |
+| proj        | == 4.9.3            | https://proj4.org/                   |
+| geos        | == 3.5.1            | https://www.osgeo.org/projects/geos/ |
+| shapefileio | == 1.6.0            | https://shapelib.maptools.org/       |
+| imagemagick | >= 6.9.13           | https://download.imagemagick.org/    |
+
+Virtuoso has support for GeoSPARQL functions which requires the `proj4`, `geos` and `shapefileio` plugins. Building these is the subject of a separate document: [README.GeoSPARQL.md](README.GeoSPARQL.md).
 
 Install the required dependencies - pick one of the following lines for your OS / distribution and then resume at the "Building" section below:
 
@@ -76,7 +100,7 @@ $ sudo apt install libreadline-dev libbz2-dev liblzma-dev
 
 
 <details>
-<summary>On Alma or Rocky Linux 8 & 9</summary>
+<summary>On Alma or Rocky Linux</summary>
 
 ```
 $ sudo yum install autoconf automake gcc libtool flex bison gperf gawk m4 make openssl openssl-devel
@@ -85,6 +109,27 @@ $ sudo yum install autoconf automake gcc libtool flex bison gperf gawk m4 make o
 Optionally:
 ```
 $ sudo yum install bzip2-devel xz-devel libedit-devel
+```
+</details>
+
+<details>
+<summary>On RedHat Enterprise Linux</summary>
+
+On RedHat Linux 7, first add this repository:
+```
+$ sudo yum --enablerepo=rhui-REGION-rhel-server-optional install gperf
+```
+
+On RedHat Enterprise Linux 8 (and newer), add this repository:
+
+```
+$ sudo yum --enablerepo=PowerTools install gperf
+```
+
+And install all dependencies as follows:
+
+```
+$ sudo yum install autoconf automake gcc libtool flex bison gperf gawk m4 make openssl openssl-develop
 ```
 </details>
 
@@ -101,32 +146,18 @@ $ sudo zypper install libedit-devel libbz2-devel xz-devel
 ```
 </details>
 
-
-<details>
-<summary>On RedHat Enterprise Linux 7</summary>
-
-```
-$ sudo yum --enablerepo=rhui-REGION-rhel-server-optional install gperf
-$ sudo yum install autoconf automake gcc libtool flex bison gperf gawk m4 make openssl openssl-develop
-```
-</details>
-
-<details>
-<summary>On RedHat Enterprise Linux 8</summary>
-```
-$ sudo yum --enablerepo=PowerTools install gperf
-$ sudo yum install autoconf automake gcc libtool flex bison gperf gawk m4 make openssl openssl-develop
-```
-</details>
-
 #### macOS
 
 <details>
-<summary>On Mac OS X 10.10 and above</summary>
+<summary>On macOS</summary>
 
 First, install [Xcode](https://developer.apple.com/xcode/) using the Mac App Store.
 
-Second, many of the above utilities were removed from Xcode so you should install [Homebrew](https://brew.sh/), then run
+Second, run the following to install the command line developer tools:
+
+```xcode-select --install```
+
+Third, many of the above utilities were removed from Xcode so you should install [Homebrew](https://brew.sh/), then run
 
 ```
 brew install autoconf automake gcc libtool flex bison gperf gawk m4 make openssl@3.0
