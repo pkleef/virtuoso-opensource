@@ -20,16 +20,19 @@ VOS includes an HTTP(S) Application Server Platform for deploying web applicatio
 
 ## Installation, Help and Documentation
 
-* Getting Virtuoso
-  * Using [prebuilt binaries found in releases](https://github.com/openlink/virtuoso-opensource/releases) on Linux, macOS or Windows
+* Virtuoso Core
+  * Using [prebuilt binaries from Github releases](https://github.com/openlink/virtuoso-opensource/releases) on Linux, macOS or Windows
   * Running Virtuoso via [Docker](README.Docker.md)
-  * JDBC drivers and providers for Jena, Sesame and RDF4j are available from [Maven Central](https://central.sonatype.com/search?q=com.openlinksw)
   * [Building from source](README.Building.md)
   * [Upgrading from previous versions](README.UPGRADE.md)
-  * [Recent changes](https://github.com/openlink/virtuoso-opensource/commits/develop/7/) and official [ChangeLog](https://raw.githubusercontent.com/openlink/virtuoso-opensource/refs/heads/develop/7/ChangeLog)
+
+* Optional Components
+  * JDBC drivers and providers for Jena, Sesame and RDF4j are available from [Maven Central](https://central.sonatype.com/search?q=com.openlinksw)
+
+* [Recent commits](https://github.com/openlink/virtuoso-opensource/commits/develop/7/), [News](NEWS.md) and [ChangeLog](https://raw.githubusercontent.com/openlink/virtuoso-opensource/refs/heads/develop/7/ChangeLog)
 * [Documentation](https://docs.openlinksw.com/virtuoso/)
-* [Community forums](https://community.openlinksw.com/) - Community forum for all OpenLink products
-* [Wiki](https://vos.openlinksw.com/)
+* [Community forums](https://community.openlinksw.com/) (for all OpenLink products)
+* [VOS Wiki](https://vos.openlinksw.com/)
 
 ## Reporting Security Vulnerabilities
 
@@ -40,11 +43,16 @@ Security vulnerabilities may be reported by following the [instructions in SECUR
 Issues with Virtuoso may be reported by [opening an issue](https://github.com/openlink/virtuoso-opensource/issues/),
 providing a summary, description and steps to reproduce.
 
-See the [VCS policy](README.GIT.md) for notes on managing this git repository.
+See our [policy](README.GIT.md) for notes on managing this git repository.
 
 ## License
 
 VOS is licensed under the [GNU General Public License Version 2, dated June 1991](COPYING.md).
+
+## Credits
+
+The Virtuoso Open-Source Edition (VOS) project acknowledges incorporation of code from several other projects. See [CREDITS](CREDITS.md) for details.
+
 
 ## See Also
 
