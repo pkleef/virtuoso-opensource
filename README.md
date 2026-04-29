@@ -22,29 +22,29 @@ VOS includes an HTTP(S) Application Server Platform for deploying web applicatio
 
 * Virtuoso Core
   * Using [prebuilt binaries from Github releases](https://github.com/openlink/virtuoso-opensource/releases) on Linux, macOS or Windows
-  * Running Virtuoso via [Docker](README.Docker.md)
-  * [Building from source](README.Building.md)
-  * [Upgrading from previous versions](README.UPGRADE.md)
+  * Running Virtuoso via [Docker](documentation/README.Docker.md)
+  * [Building from source](documentation/README.Building.md)
+  * [Upgrading from previous versions](documentation/README.UPGRADE.md)
 
 * Optional Components
   * JDBC drivers and providers for Jena, Sesame and RDF4j are available from [Maven Central](https://central.sonatype.com/search?q=com.openlinksw)
 
-* [Recent commits](https://github.com/openlink/virtuoso-opensource/commits/develop/7/), [News](NEWS.md) and [ChangeLog](https://raw.githubusercontent.com/openlink/virtuoso-opensource/refs/heads/develop/7/ChangeLog)
+* [Recent commits](https://github.com/openlink/virtuoso-opensource/commits/develop/7/), [News](documentation/NEWS.md) and [ChangeLog](https://raw.githubusercontent.com/openlink/virtuoso-opensource/refs/heads/develop/7/ChangeLog)
 * [Documentation](https://docs.openlinksw.com/virtuoso/)
-* Notes on Virtuoso's support for [SPARQL ANYTIME](README.ANYTIME.md) and [GeoSPARQL](README.GeoSPARQL.md)
+* Notes on Virtuoso's support for [SPARQL ANYTIME](documentation/README.ANYTIME.md) and [GeoSPARQL](documentation/README.GeoSPARQL.md)
 * [Community forums](https://community.openlinksw.com/) (for all OpenLink products)
 * [VOS Wiki](https://vos.openlinksw.com/)
 
 ## Reporting Security Vulnerabilities
 
-Security vulnerabilities may be reported by following the [instructions in SECURITY.md](SECURITY.md).
+Security vulnerabilities may be reported by following the [instructions in SECURITY.md](documentation/SECURITY.md).
 
 ## Reporting an Issue
 
 Issues with Virtuoso may be reported by [opening an issue](https://github.com/openlink/virtuoso-opensource/issues/),
 providing a summary, description and steps to reproduce.
 
-See our [policy](README.GIT.md) for notes on managing this git repository.
+See our [policy](documentation/README.GIT.md) for notes on managing this git repository.
 
 ## License
 
