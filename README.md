@@ -31,6 +31,7 @@ VOS includes an HTTP(S) Application Server Platform for deploying web applicatio
 
 * [Recent commits](https://github.com/openlink/virtuoso-opensource/commits/develop/7/), [News](NEWS.md) and [ChangeLog](https://raw.githubusercontent.com/openlink/virtuoso-opensource/refs/heads/develop/7/ChangeLog)
 * [Documentation](https://docs.openlinksw.com/virtuoso/)
+* Notes on Virtuoso's support for [SPARQL ANYTIME](README.ANYTIME.md) and [GeoSPARQL](README.GeoSPARQL.md)
 * [Community forums](https://community.openlinksw.com/) (for all OpenLink products)
 * [VOS Wiki](https://vos.openlinksw.com/)
 
