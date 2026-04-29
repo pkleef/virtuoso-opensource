@@ -19,4 +19,4 @@ The Sesame 3 provider requires JDK 1.6 or newer.
 	slf4j-jdk14-1.5.6.jar
 ```
 
-  * Run the make command
+  * Run the `make` command

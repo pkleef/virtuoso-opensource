@@ -8,7 +8,7 @@
 	hibernate3.jar
 ```
 
-  * Run the make command
+  * Run the `make` command
 
 
 ## Virtuoso Dialect Sample

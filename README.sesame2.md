@@ -18,4 +18,4 @@ The Sesame 2 Provider requires JDK 1.5 or newer.
 	slf4j-simple-1.5.11.jar
 ```
 
-  * Run the make command
+  * Run the `make` command
