@@ -1,10 +1,9 @@
-How to build the Virtuoso Hibernate dialect
+How to Build the Virtuoso Hibernate Dialect
 ===========================================
 
-  * Create a lib directory 
+  * Create a lib directory
 
-  * Put the following .jar file from the project at
-    http://www.hibernate.org in here:
+  * Put this .jar file from the project at http://www.hibernate.org in here:
 
 ```
 	hibernate3.jar
@@ -13,7 +12,7 @@ How to build the Virtuoso Hibernate dialect
   * Run the make command
 
 
-Virtuoso dialect sample
+Virtuoso Dialect Sample
 -----------------------
 ```
     hibernate.dialect=virtuoso.hibernate.VirtuosoDialect

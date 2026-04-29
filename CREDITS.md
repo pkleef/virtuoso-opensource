@@ -1,14 +1,13 @@
 Credits
 =======
 
-*Copyright (C) 1998-2026 OpenLink Software <vos.admin@openlinksw.com>*
+*Copyright (C) 1998-2025 OpenLink Software <vos.admin@openlinksw.com>*
 
 
 Included Functionality
 ----------------------
 
-The OpenLink Software Virtuoso Open-Source Edition (VOS) project wishes to
-acknowledge incorporation of code from the following projects:
+The OpenLink Software Virtuoso Open-Source Edition (VOS) project acknowledges the incorporation of code from the following projects:
 
 OpenSSL
 <http://www.openssl.org/>
@@ -29,17 +28,17 @@ OpenSSL
     restrictions: <http://www.openssl.org/support/faq.html#LEGAL1>
 
 
-Tidy-html5 - HTML parser and pretty printer
+Tidy-html5 - HTML Parser and Pretty Printer
 <http://www.htacg.org/tidy-html5/>
 
-    This product includes tidy-html5 which is currently maintained by HTACG:
+    This product includes tidy-html5 currently maintained by HTACG:
     <http://www.html-tidy.org/#acknowledgements>
 
     Tidy-html5 is distributed under the terms of the W3C License:
     <https://github.com/htacg/tidy-html5/blob/4.9.26/LICENSE.txt>
 
 
-Zlib - compression library
+Zlib - Compression Library
 <http://www.zlib.net/>
 
     This product includes the Zlib library developed by Jean-loup Gailly
@@ -72,7 +71,7 @@ OAT
 CKEditor
 <http://ckeditor.com/>
 
-    Virtuoso uses the CKEditor, a WYSIWYG editor in javascript in the
+    Virtuoso uses the CKEditor, a JavaScript WYSIWYG editor in the
     Data Space application suite.
 
     CKEditor is distributed under the terms of the GNU Public License,
@@ -80,10 +79,10 @@ CKEditor
     <http://ckeditor.com/license>
 
 
-SHA1 Javascript
+SHA1 JavaScript
 
-    Virtuoso uses a Javsscript implementation of the Secure Hash Algoritm
-    (SHA1) as defined in FIPS PUB 180-1, written  by Paul Johnston
+    Virtuoso uses a JavaScript implementation of the Secure Hash Algorithm
+    (SHA1) as defined in FIPS PUB 180-1, written by Paul Johnston
 
     SHA1 is distributed under the terms of the BSD license
     <http://pajhome.org.uk/crypt/md5>
@@ -92,17 +91,17 @@ SHA1 Javascript
 MD5 Java
 
     Virtuoso uses a Java implementation of the MD5 hash algorithm
-    as defined in RFC1231, written Santeri Paavolainen
+    as defined in RFC1321, written by Santeri Paavolainen
 
     MD5.java is distributed under the terms of the GNU Lesser General
     Public License (LGPL): <http://www.gnu.org/licenses/lgpl.html>.
 
 
-MS5 C
+MD5 C
 <http://openwall.info/wiki/people/solar/software/public-domain-source-code/md5>
 
     Virtuoso uses a C implementation of an OpenSSL-compatible MD5
-    hash algorithm as defined in RDF1231, written by Alexander
+    hash algorithm as defined in RFC1321, written by Alexander
     Peslyak aka Solar Designer
 
     md5.c and md5.h have been placed in the public domain.
