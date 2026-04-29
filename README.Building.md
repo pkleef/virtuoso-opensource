@@ -19,6 +19,8 @@ For deeper discussion and instructions on building your own, see the [community 
 
 Virtuoso JDBC drivers as well as Jena, Sesame and RDF4j providers can be downloaded from [Maven Central](https://central.sonatype.com/search?q=com.openlinksw).
 
+See [README.jena.md](README.jena.md) and [README.jsse.md](README.jsse.md) for notes on building our Jena providers and JDBC drivers from source.
+
 ## Building VOS from Source
 
 Windows requires special instructions. See [README.WINDOWS.md](README.WINDOWS.md) for details.
