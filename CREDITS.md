@@ -176,7 +176,7 @@ iODBC <http://www.iodbc.org/>
 
     Virtuoso may be linked against the iODBC driver manager library.
 
-    iODBC is distributed under the terms of either the LGPL or BSD license: <http://www.iodbc.org/index.php?page=docs/license>
+    iODBC is distributed under the terms of either the LGPL or BSD license: <https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/License>
 
 
 WBXML2 <http://libwbxml.aymerick.com>
