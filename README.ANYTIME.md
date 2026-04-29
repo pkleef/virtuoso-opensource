@@ -1,21 +1,21 @@
 # Virtuoso Anytime Query Functionality
 <small>Copyright &copy; 2022-2025 OpenLink Software</small>
 
-- [Introduction](#introduction)
-- [Virtuoso Anytime Query extension for SPARQL](#virtuoso-anytime-query-extension-for-sparql)
-    - [Server-side settings](#server-side-settings)
-    - [Client-side parameter](#client-side-parameter)
-    - [Virtuoso HTTP status codes and response headers](#virtuoso-http-status-codes-and-response-headers)
-        - [HTTP status code 200 OK](#http-status-code-200-ok)
-        - [HTTP status code 206 Partial](#http-status-code-206-partial)
-        - [HTTP status code 400 Bad Request](#http-status-code-400-bad-request)
-        - [HTTP status 500 Server Error](#http-status-500-server-error)
-        - [HTTP status code 504 Gateway Timeout](#http-status-code-504-gateway-timeout)
-- [Virtuoso Anytime Query functionality & GraphQL queries](#virtuoso-anytime-query-functionality--graphql-queries)
-- [Virtuoso Anytime Query functionality for ODBC, JDBC, iSQL or Virtuoso PL clients](#virtuoso-anytime-query-functionality-for-odbc-jdbc-isql-or-virtuoso-pl-clients)
-    - [Example using Virtuoso iSQL/PL](#example-using-virtuoso-isqlpl)
-    - [Example using SPARQL inside SQL (SPASQL) via iODBC](#example-using-sparql-inside-sql-spasql-via-iodbc)
-- [See also](#see-also)
+* [Introduction](#introduction)
+* [Virtuoso Anytime Query extension for SPARQL](#virtuoso-anytime-query-extension-for-sparql)
+    * [Server-side settings](#server-side-settings)
+    * [Client-side parameter](#client-side-parameter)
+    * [Virtuoso HTTP status codes and response headers](#virtuoso-http-status-codes-and-response-headers)
+        * [HTTP status code 200 OK](#http-status-code-200-ok)
+        * [HTTP status code 206 Partial](#http-status-code-206-partial)
+        * [HTTP status code 400 Bad Request](#http-status-code-400-bad-request)
+        * [HTTP status 500 Server Error](#http-status-500-server-error)
+        * [HTTP status code 504 Gateway Timeout](#http-status-code-504-gateway-timeout)
+* [Virtuoso Anytime Query functionality & GraphQL queries](#virtuoso-anytime-query-functionality--graphql-queries)
+* [Virtuoso Anytime Query functionality for ODBC, JDBC, iSQL or Virtuoso PL clients](#virtuoso-anytime-query-functionality-for-odbc-jdbc-isql-or-virtuoso-pl-clients)
+    * [Example using Virtuoso iSQL/PL](#example-using-virtuoso-isqlpl)
+    * [Example using SPARQL inside SQL (SPASQL) via iODBC](#example-using-sparql-inside-sql-spasql-via-iodbc)
+* [See also](#see-also)
 
 # Introduction
 

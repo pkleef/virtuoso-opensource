@@ -1,11 +1,9 @@
-Using Virtuoso Open Source Edition GIT Tree
-===========================================
+# Using Virtuoso Open Source Edition GIT Tree
 
 Copyright (C) 1998-2025 OpenLink Software <vos.admin@openlinksw.com>
 
 
-Introduction
-============
+# Introduction
 
 This document describes how to check out a copy of the git tree for development purposes. It also lists the packages that need to be installed prior to generating the necessary scripts and Makefiles to build the project.
 
@@ -14,14 +12,15 @@ Git access is only needed for developers actively tracking progress of the Virtu
 Email questions to <vos.admin@openlinksw.com> or open a [GitHub issue](https://github.com/openlink/virtuoso-opensource/issues/).
 
 
-Git Archive Server Access
-=========================
+# Git Archive Server Access
 
 For main development, OpenLink Software publishes the Virtuoso Open Source tree to GitHub and encourages everyone interested in tracking the project to make an account there.
 
 Users mainly wanting to track the code can use this command to get a copy of the tree:
 
-    $ git clone git://github.com/openlink/virtuoso-opensource.git
+```sh
+$ git clone git://github.com/openlink/virtuoso-opensource.git
+```
 
 
 At this point, create your own work branch based on any of the branches available, create bugfixes and commit them to your own branch and then use the 'git format-patch' command to generate the appropriate diffs to send to:

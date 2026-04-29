@@ -1,5 +1,4 @@
-How to Build the Virtuoso Hibernate Dialect
-===========================================
+# How to Build the Virtuoso Hibernate Dialect
 
   * Create a lib directory
 
@@ -12,8 +11,7 @@ How to Build the Virtuoso Hibernate Dialect
   * Run the make command
 
 
-Virtuoso Dialect Sample
------------------------
+## Virtuoso Dialect Sample
 ```
     hibernate.dialect=virtuoso.hibernate.VirtuosoDialect
     hibernate.connection.driver_class=virtuoso.jdbc3.Driver

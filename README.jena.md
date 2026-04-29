@@ -1,5 +1,4 @@
-How to Build Virtuoso Jena Provider
-===================================
+# How to Build Virtuoso Jena Provider
 
 The Jena Provider can be compiled with JDK 1.5 or newer.
 

@@ -1,5 +1,4 @@
-Building Virtuoso Open Source Edition on Mac OS X
-=================================================
+# Building Virtuoso Open Source Edition on Mac OS X
 
 *Copyright (C) 1998-2025 OpenLink Software <vos.admin@openlinksw.com>*
 
@@ -22,7 +21,9 @@ OpenLink Software frequently pushes updates to the Virtuoso Open Source tree on 
 
 Developers building Virtuoso on their own machine can make a local clone of the source tree using this command:
 
-    $ git clone git://github.com/openlink/virtuoso-opensource.git
+```sh
+$ git clone git://github.com/openlink/virtuoso-opensource.git
+```
 
 At this point, create your own work branch based on any of the branches available, create bugfixes and commit them to your own branch and then use the 'git format-patch' command to generate the appropriate diffs to send to <mailto:vos.admin@openlinksw.com>.
 
@@ -48,7 +49,9 @@ Developers not using git can also download a source tar archive from:
 
 This tar archive can be extracted using this command:
 
-    $ tar xvfz virtuoso-opensource-development-7.tar.gz
+```sh
+$ tar xvfz virtuoso-opensource-development-7.tar.gz
+```
 
 Configuration and building is exactly the same as for the cloned git tree.
 
@@ -61,8 +64,10 @@ OpenLink Software suggests using the Homebrew package manager from http://brew.s
 
 After the installation of Homebrew you need to install these packages:
 
-    $ brew install autoconf automake libtool
-    $ brew install gperf bison flex git gawk pkg-config
+```sh
+$ brew install autoconf automake libtool
+$ brew install gperf bison flex git gawk pkg-config
+```
 
 By default, Homebrew installs all packages and libraries into subdirectories under the /usr/local directory.
 
@@ -73,11 +78,15 @@ Comparable packages can also be installed via MacPorts which installs into /opt/
 
 Optional features like command line editing in the isql tool require:
 
-    $ brew install libedit
+```sh
+$ brew install libedit
+```
 
 or
 
-    $ brew install readline
+```sh
+$ brew install readline
+```
 
 
 ### OpenSSL on Mac OS X
@@ -86,11 +95,15 @@ As Apple is actively deprecating OpenSSL from macOS, your system may have a rath
 
 Install the OpenSSL 1.0.2 library using:
 
-    $ brew install openssl
+```sh
+$ brew install openssl
+```
 
 At configure time, use:
 
-    $ sh ./configure \
+```sh
+$ sh ./configure \
+```
       ..... \
       ..... \
       --enable-openssl=/usr/local/opt/openssl/
@@ -100,14 +113,18 @@ At configure time, use:
 
 The ImageMagick plugin requires these packages to be installed:
 
-    $ brew install pkg-config
-    $ brew install imagemagick@6
+```sh
+$ brew install pkg-config
+$ brew install imagemagick@6
+```
 
 This installs ImageMagick 6.x together with a number of libraries to work with specific graphic formats.
 
 At configure time, use:
 
-    $ sh ./configure \
+```sh
+$ sh ./configure \
+```
        ..... \
        --enable-imagemagick=/usr/local/opt/imagemagick\@6/
 
@@ -116,27 +133,37 @@ At configure time, use:
 
 First set some environment variables:
 
-    $ export CFLAGS="-O -arch x86_64"
-    $ export LDFLAGS="-g"
-    $ export CC="clang"
+```sh
+$ export CFLAGS="-O -arch x86_64"
+$ export LDFLAGS="-g"
+$ export CC="clang"
+```
 
 Note: On macOS 11 (Big Sur) and later set the CFLAGS to make a universal binary that runs on both Intel and Apple Silicon platforms:
 
-    $ export CFLAGS="-O -arch arm64 -arch x86_64"
+```sh
+$ export CFLAGS="-O -arch arm64 -arch x86_64"
+```
 
 Next regenerate the configure script and all related build files, using the supplied script in your working directory:
 
-    $ sh ./autogen.sh
+```sh
+$ sh ./autogen.sh
+```
 
 Assuming this did not return an error, configure Virtuoso now.
 
 For a full list of available `configure` options, including various optional subpackages, check the output of:
 
-    $ sh ./configure --help
+```sh
+$ sh ./configure --help
+```
 
 The following command includes a number of options we recommend for an initial build of Virtuoso on Mac OS X:
 
-    $ sh ./configure \
+```sh
+$ sh ./configure \
+```
         --enable-maintainer-mode \
         --enable-silent-rules \
         --prefix=/usr/local/vos \
@@ -152,15 +179,21 @@ The following command includes a number of options we recommend for an initial b
 
 If these steps return without error, the archive can now be built using these commands:
 
-    $ make
+```sh
+$ make
+```
 
 After building, optionally run the test suite to verify your binaries are in working order:
 
-    $ make check
+```sh
+$ make check
+```
 
 Finally, to install the resulting binaries into the /usr/local/vos directory:
 
-    $ make install
+```sh
+$ make install
+```
 
 
 ## Disk Space Requirements

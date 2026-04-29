@@ -1,12 +1,10 @@
-PHP SAPI Module for Virtuoso
-============================
+# PHP SAPI Module for Virtuoso
 
 **DEPRECATED**: This is a very legacy plugin and is no longer officially supported.
 
 This is a SAPI module for PHP 5.x, implemented as a Virtuoso loadable module.
 
-Building PHP
-------------
+## Building PHP
 
 To build the plugin, first build a libphp5.so configured with ZTS.
 
@@ -94,8 +92,7 @@ This explicitly directs the build process to the PHP header files.
 At the end of the configure step, the summary screen should indicate the BUILD_OPTS includes "php5". If this is not the case, the config.log file should contain information on why configure was unable to locate your php5 installation.
 
 
-Installation
-------------
+## Installation
 
   1. Copy the libphp5.so into the same directory where virtuoso installs the hosting_php5.so plugin e.g.
 
@@ -126,11 +123,9 @@ Installation
 
 
 
-Virtuoso PHP Extensions
------------------------
+## Virtuoso PHP Extensions
 
-Settings
---------
+## Settings
 
 The Virtuoso php hosting plugin adds these default settings to the php.ini file:
 
@@ -147,8 +142,7 @@ The virtuoso.local_dsn is by default set to "Local Virtuoso" which is the DSN in
 
 The virtuoso.allow_dba option rejects the use of the dba uid when using __virt_internal_dsn().
 
-Functions
----------
+## Functions
 
     __virt_internal_dsn([optional dsn])
 

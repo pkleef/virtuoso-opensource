@@ -1,5 +1,4 @@
-How to Build Virtuoso JDBC 2.0 SSL Driver
-=========================================
+# How to Build Virtuoso JDBC 2.0 SSL Driver
 
 The Virtuoso JDBC 2.x SSL driver can still be built using JDK 1.3
 

@@ -1,5 +1,4 @@
-How to Build the Virtuoso Sesame 3 Provider
-===========================================
+# How to Build the Virtuoso Sesame 3 Provider
 
 The Sesame 3 provider requires JDK 1.6 or newer.
 

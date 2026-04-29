@@ -1,5 +1,4 @@
-How to Build the Virtuoso Sesame 2 Provider
-===========================================
+# How to Build the Virtuoso Sesame 2 Provider
 
 The Sesame 2 Provider requires JDK 1.5 or newer.
 

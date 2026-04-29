@@ -169,7 +169,7 @@ brew install autoconf automake gcc libtool flex bison gperf gawk m4 make openssl
 
 Checkout a clone of the git repository:
 
-```
+```sh
 $ git clone https://github.com/openlink/virtuoso-opensource.git
 $ cd virtuoso-opensource
 ```
@@ -180,36 +180,37 @@ The default and recommended branch is `develop/7`. Users requiring a slower upda
 
 To regenerate the configure script and all related build files, use the supplied script in your working directory:
 
-```
+```sh
 $ ./autogen.sh
 ```
 
 Assuming this runs successfully,
 
-```
+```sh
 $ ./configure --enable-maintainer-mode --prefix=/opt/virtuoso-opensource --with-layout=openlink
 ```
 
    * on macOS, add a pointer to find OpenSSL from homebrew:
-```
+
+```sh
 $ ./configure --enable-maintainer-mode --prefix=/opt/virtuoso-opensource --with-layout=openlink --enable-openssl=/opt/homebrew/Cellar/openssl@3.0/3.0.15/
 ```
 
 and then
 
-```
+```sh
 $ make -j4
 ```
 
 To run the test suite (optional):
 
-```
+```sh
 $ make check
 ```
 
 and finally
 
-```
+```sh
 $ sudo make install
 ```
 
@@ -219,7 +220,7 @@ VOS can be configured with many options and VAD packages, for example libshape, 
 
 For further information, run:
 
-```
+```sh
 $ ./configure --help
 ```
 
@@ -246,16 +247,15 @@ The minimum working configuration consists of the server executable and config f
 
 Change into the installation's `database/` subdirectory and start the server:
 
-```
+```sh
 $ cd /opt/virtuoso-opensource/database
-
 $ ls
 virtuoso.ini
 ```
 
 For the first run, to illustrate the potential console output, run it in debug foreground mode:
 
-```
+```sh
 $ ../bin/virtuoso-t -df
 ```
 
