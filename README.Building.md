@@ -21,7 +21,7 @@ Virtuoso JDBC drivers as well as Jena, Sesame and RDF4j providers can be downloa
 
 ## Building VOS from Source
 
-Windows requires special instructions. See [README.Windows.md](README.Windows.md) for details.
+Windows requires special instructions. See [README.WINDOWS.md](README.WINDOWS.md) for details.
 
 ### Package Dependencies
 
